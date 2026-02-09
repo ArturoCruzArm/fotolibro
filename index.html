@@ -704,11 +704,10 @@
     // START
     // =============================================
     window.addEventListener('DOMContentLoaded', () => {
-        coverImage = new Image();
-        coverImage.crossOrigin = 'anonymous';
-        coverImage.onload = () => { init(); };
-        coverImage.onerror = () => { init(); };
-        coverImage.src = 'album1/portada.jpeg';
+        const img = new Image();
+        img.onload = () => { coverImage = img; init(); };
+        img.onerror = () => { coverImage = null; init(); };
+        img.src = 'album1/portada.jpeg';
     });
     </script>
 </body>
