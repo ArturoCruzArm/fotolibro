@@ -676,7 +676,7 @@
             else frontTex = createBlankPageTexture();
 
             const frontPlane = new THREE.Mesh(
-                new THREE.PlaneGeometry(W - 0.1, H - 0.1),
+                new THREE.PlaneGeometry(W, H),
                 new THREE.MeshPhongMaterial({ map: frontTex, specular: 0x222211, shininess: 5 })
             );
             frontPlane.position.set(meshOX, 0, thickness / 2 + 0.003);
@@ -691,7 +691,7 @@
             else backTex = createBlankPageTexture();
 
             const backPlane = new THREE.Mesh(
-                new THREE.PlaneGeometry(W - 0.1, H - 0.1),
+                new THREE.PlaneGeometry(W, H),
                 new THREE.MeshPhongMaterial({ map: backTex, specular: 0x222211, shininess: 5 })
             );
             backPlane.position.set(meshOX, 0, -thickness / 2 - 0.003);
